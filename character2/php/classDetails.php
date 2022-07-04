@@ -1,6 +1,6 @@
 <?php
 
-/*Cleric */
+/*Elf */
 
 function getHitPoints($level, $conMod)
 {
@@ -38,7 +38,7 @@ function getHitPoints($level, $conMod)
     
         }
 
-        $levelTenPlusHP = ($level - 9);
+        $levelTenPlusHP = ($level - 9) * 2;
 
         $hitPoints += $levelTenPlusHP;
 
@@ -50,27 +50,31 @@ function getHitPoints($level, $conMod)
 }
 
 
+function elfClassAbilities($alignment)
+{
+    return "Infavision 60'.<br/><br/>When actively searching, elves are able to detect hidden and secret doors on a roll of 1-2 on a d6.<br/><br/>Unaffected by the papralysis ghouls inflict.<br/><br/>Able to speak the Common tongue, Elvish, " . $alignment . " Alignment tongue, Gnoll, Hobgoblin and Orc.<br/><br/>";
+}
+
+
+
+
 function saveBreathAttack($level)
 {
-    if($level <= 4)
+    if($level <= 3)
     {
-        return 16;
+        return 15;
     }
-    else if($level >= 5 && $level <= 8)
+    else if($level >= 4 && $level <= 6)
     {
-        return 14;
+        return 13;
     }
-    else if($level >= 9 && $level <= 12)
+    else if($level >= 7 && $level <= 9)
     {
-        return 12;
-    }
-    else if($level >= 13 && $level <= 16)
-    {
-        return 8;
+        return 9;
     }
     else
     {
-        return 6;
+        return 7;
     }
 
 }
@@ -78,50 +82,43 @@ function saveBreathAttack($level)
 
 function savePoisonDeath($level)
 {
-    if($level <= 4)
-    {
-        return 11;
-    }
-    else if($level >= 5 && $level <= 8)
-    {
-        return 9;
-    }
-    else if($level >= 9 && $level <= 12)
-    {
-        return 7;
-    }
-    else if($level >= 13 && $level <= 16)
-    {
-        return 3;
-    }
-    else
-    {
-        return 2;
-    }
-}
-
-
-function savePetrify($level)
-{
-    if($level <= 4)
-    {
-        return 14;
-    }
-    else if($level >= 5 && $level <= 8)
+    if($level <= 3)
     {
         return 12;
     }
-    else if($level >= 9 && $level <= 12)
+    else if($level >= 4 && $level <= 6)
     {
         return 10;
     }
-    else if($level >= 13 && $level <= 16)
+    else if($level >= 7 && $level <= 9)
     {
         return 8;
     }
     else
     {
         return 6;
+    }
+
+}
+
+
+function savePetrify($level)
+{
+    if($level <= 3)
+    {
+        return 13;
+    }
+    else if($level >= 4 && $level <= 6)
+    {
+        return 11;
+    }
+    else if($level >= 7 && $level <= 9)
+    {
+        return 9;
+    }
+    else
+    {
+        return 7;
     }
 
 }
@@ -129,25 +126,21 @@ function savePetrify($level)
 
 function saveWands($level)
 {
-    if($level <= 4)
+    if($level <= 3)
     {
-        return 12;
+        return 13;
     }
-    else if($level >= 5 && $level <= 8)
+    else if($level >= 4 && $level <= 6)
     {
-        return 10;
+        return 11;
     }
-    else if($level >= 9 && $level <= 12)
+    else if($level >= 7 && $level <= 9)
     {
-        return 8;
-    }
-    else if($level >= 13 && $level <= 16)
-    {
-        return 4;
+        return 9;
     }
     else
     {
-        return 4;
+        return 7;
     }
 
 }
@@ -155,71 +148,58 @@ function saveWands($level)
 
 function saveSpells($level)
 {
-    if($level <= 4)
+    if($level <= 3)
     {
         return 15;
     }
-    else if($level >= 5 && $level <= 8)
+    else if($level >= 4 && $level <= 6)
     {
-        return 12;
+        return 13;
     }
-    else if($level >= 9 && $level <= 12)
+    else if($level >= 7 && $level <= 9)
+    {
+        return 11;
+    }
+    else
     {
         return 9;
     }
-    else if($level >= 13 && $level <= 16)
-    {
-        return 6;
-    }
-    else
-    {
-        return 5;
-    }
 
 }
 
-function primeReq($abilityScore)
-{
-    
-    if($abilityScore >= 3 && $abilityScore <=5)
-        {
-            return "-10% Experience Point Adjustment (Prime Requisite)</br>";
-        }
-    else if($abilityScore >= 6 && $abilityScore <=8)
-        {
-            return "-5% Experience Point Adjustment (Prime Requisite)</br>";
-        }
-    else if($abilityScore >= 13 && $abilityScore <=15)
-        {
-            return "+5% Experience Point Adjustment (Prime Requisite)</br>";
-        }
-    else if($abilityScore >= 16 && $abilityScore <=18)
-        {
-            return "+10% Experience Point Adjustment (Prime Requisite)</br>";
-        }
-    else
-        {
-            return "";
-        }
-    
-}
 
-function secondAttack($level)
+function primeReq($intelligence, $strength)
 {
-    if($level >= 15 && $level <= 18)
+    if($intelligence > 12 && $strength > 12)
     {
-        return "Fighter has 2 attacks per round.";
-    }
-    else if($level > 18)
-    {
-        return "Fighter has 3 attacks per round.";
+        if($intelligence > 15 && $strength > 15)
+        {
+            return "+10% Experience Point Adjustment (Prime Requisite)<br/><br/>";
+        }
+        else
+        {
+            return "+5% Experience Point Adjustment (Prime Requisite)<br/><br/>";
+        }
     }
     else
     {
         return "";
     }
-
+    
 }
+
+function elfStronghold($level)
+{
+    if($level < 9)
+    {
+        return "";
+    }
+    else
+    {
+        return "Can establish a stronghold in a natural setting; all ordinary animals within 5 miles of the stronghold will be kind and helpful to the character.";
+    }
+}
+
 
 
 function strengthModifierDescription($abilityScore)
@@ -420,53 +400,51 @@ function charismaModifierDescription($abilityScore)
 }
 
 
+
 function getThaco($level, $abiltyMod)
 {
-    if($level == 1 || $level == 2 || $level == 3)
+    if($level == 1 || $level == 2)
     {
         $thaco = 19;
     }
-    else if($level == 4 || $level == 5)    
+    else if($level == 3)    
     {
         $thaco = 18;
     }
-    else if($level == 6 || $level == 7 || $level == 8)    
+    else if($level == 4)    
     {
         $thaco = 17;
     }
-    else if($level == 9 || $level == 10)    
+    else if($level == 5)    
     {
         $thaco = 16;
     }
-    else if($level == 11)    
+    else if($level == 6)    
     {
         $thaco = 15;
     }
-    else if($level == 12)    
+    else if($level == 7 || $level == 8)    
     {
         $thaco = 14;
     }
-    else if($level == 13 || $level == 14)    
+    else if($level == 9)    
     {
         $thaco = 13;
     }
-    else if($level == 15 || $level == 16)    
+    else if($level == 10)    
     {
         $thaco = 12;
     }
-    else if($level == 17 || $level == 18)    
-    {
-        $thaco = 11;
-    }
     else
     {
-        $thaco = 10;
+        $thaco = 30;
     }
 
     $thaco -= $abiltyMod;
 
     return $thaco;
 }
+
 
 function getThacoCheck($score)
 {
@@ -476,6 +454,16 @@ function getThacoCheck($score)
     }
 
     return $score;
+}
+
+function demiHumanScoreMin($abilityScore)
+{
+    if($abilityScore < 9)
+    {
+        $abilityScore = 9;
+    }
+
+    return $abilityScore;
 }
 
 

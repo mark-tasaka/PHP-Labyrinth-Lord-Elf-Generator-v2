@@ -220,6 +220,10 @@
             $dexterity = $abilityScoreArray[1];
             $constitution = $abilityScoreArray[2];
             $intelligence = $abilityScoreArray[3];
+
+            //Elf min Intelligence of 9
+            $intelligence = demiHumanScoreMin($intelligence);
+
             $wisdom = $abilityScoreArray[4];
             $charisma = $abilityScoreArray[5];
             
@@ -386,8 +390,9 @@
         $saveSpells = saveSpells($level);
         $saveSpells -= $wisdomMod;
 
-        $primeReq = primeReq($wisdom);
-        //$secondAttack = secondAttack($level);
+        $primeReq = primeReq($intelligence, $strength);
+        $elfAbility = elfClassAbilities($alignment);
+        $elfStronghold = elfStronghold($level);
 
         $strengthDescription = strengthModifierDescription($strength);
         $dexterityDescription = dexterityModifierDescription($dexterity);
@@ -441,9 +446,6 @@
         $level3Spells = spellsLevel3($level);
         $level4Spells = spellsLevel4($level);
         $level5Spells = spellsLevel5($level);
-        $level6Spells = spellsLevel6($level);
-        $level7Spells = spellsLevel7($level);
-
     
     ?>
 
@@ -969,7 +971,9 @@
         
         <span id="classAbilities">
             <?php
+                echo $elfAbility;
                 echo $primeReq;
+                echo $elfStronghold;
             ?>
         </span>
 
@@ -1004,17 +1008,6 @@
             ?>
         </span>
         
-        <span id="level6Spells">
-            <?php
-                echo $level6Spells;
-            ?>
-        </span>
-        
-        <span id="level7Spells">
-            <?php
-                echo $level7Spells;
-            ?>
-        </span>
         
 	</section>
 	

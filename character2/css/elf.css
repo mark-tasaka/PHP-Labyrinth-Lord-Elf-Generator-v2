@@ -413,70 +413,70 @@ body{
 
 #meleeHitAC0{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 130px;
 	font-size: 1em;
 }
 
 #meleeHitAC1{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 178px;
 	font-size: 1em;
 }
 
 #meleeHitAC2{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 226px;
 	font-size: 1em;
 }
 
 #meleeHitAC3{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 278px;
 	font-size: 1em;
 }
 
 #meleeHitAC4{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 328px;
 	font-size: 1em;
 }
 
 #meleeHitAC5{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 380px;
 	font-size: 1em;
 }
 
 #meleeHitAC6{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 430px;
 	font-size: 1em;
 }
 
 #meleeHitAC7{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 482px;
 	font-size: 1em;
 }
 
 #meleeHitAC8{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 534px;
 	font-size: 1em;
 }
 
 #meleeHitAC9{
     position:absolute;
-    top: 830px;
+    top: 837px;
     left: 586px;
 	font-size: 1em;
 }
@@ -485,121 +485,121 @@ body{
 
 #missileHitAC0{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 130px;
 	font-size: 1em;
 }
 
 #missileHitAC1{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 178px;
 	font-size: 1em;
 }
 
 #missileHitAC2{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 226px;
 	font-size: 1em;
 }
 
 #missileHitAC3{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 278px;
 	font-size: 1em;
 }
 
 #missileHitAC4{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 328px;
 	font-size: 1em;
 }
 
 #missileHitAC5{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 380px;
 	font-size: 1em;
 }
 
 #missileHitAC6{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 430px;
 	font-size: 1em;
 }
 
 #missileHitAC7{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 482px;
 	font-size: 1em;
 }
 
 #missileHitAC8{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 534px;
 	font-size: 1em;
 }
 
 #missileHitAC9{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 586px;
 	font-size: 1em;
 }
 
 #level1Spells{
     position:absolute;
-    top: 940px;
-    left: 228px;
+    top: 946px;
+    left: 198px;
 	font-size: 1em;
 }
 
 
 #level2Spells{
     position:absolute;
-    top: 940px;
-    left: 278px;
+    top: 946px;
+    left: 248px;
 	font-size: 1em;
 }
 
 
 #level3Spells{
     position:absolute;
-    top: 940px;
-    left: 328px;
+    top: 946px;
+    left: 298px;
 	font-size: 1em;
 }
 
 #level4Spells{
     position:absolute;
-    top: 940px;
-    left: 378px;
+    top: 946px;
+    left: 348px;
 	font-size: 1em;
 }
 
 #level5Spells{
     position:absolute;
-    top: 940px;
-    left: 428px;
+    top: 946px;
+    left: 398px;
 	font-size: 1em;
 }
 
 #level6Spells{
     position:absolute;
-    top: 940px;
+    top: 946px;
     left: 478px;
 	font-size: 1em;
 }
 
 #level7Spells{
     position:absolute;
-    top: 940px;
+    top: 946px;
     left: 528px;
 	font-size: 1em;
 }
@@ -712,9 +712,10 @@ body{
 
 #classAbilities{
     position:absolute;
-    top: 1076px;
-    left: 45px;
-	font-size: 0.7em;
+    top: 990px;
+    left: 35px;
+	font-size: 0.55em;
+    width: 590px;
 }
 
 
@@ -944,7 +945,7 @@ body{
 
 #findTrap{
     position:absolute;
-    top: 866px;
+    top: 876px;
     left: 505px;
     font-size: 0.8em;
 }

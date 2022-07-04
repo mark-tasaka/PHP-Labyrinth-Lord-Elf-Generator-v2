@@ -1,4 +1,5 @@
 <?php
+/*Elf*/
 
 function getXPNextLevel ($level)
 {
@@ -8,85 +9,44 @@ function getXPNextLevel ($level)
     switch ($level) 
     {
         case "1":
-            $xpNext = "1,565";
+            $xpNext = "4,065";
           break;
 
         case "2":
-            $xpNext = "3,125";
+            $xpNext = "8,125";
         break;
         
         case "3":
-            $xpNext = "6,251";
+            $xpNext = "16,251";
         break;
         
         case "4":
-            $xpNext = "12,501";
+            $xpNext = "32,501";
         break;
         
         case "5":
-            $xpNext = "25,001";
+            $xpNext = "65,001";
         break;
         
         case "6":
-            $xpNext = "50,001";
+            $xpNext = "130,001";
         break;        
 
         case "7":
-            $xpNext = "100,001";
-        break;
-                
-        case "8":
             $xpNext = "200,001";
         break;
                 
-        case "9":
-            $xpNext = "300,001";
-        break;
-                
-        case "10":
+        case "8":
             $xpNext = "400,001";
         break;
                 
-        case "11":
-            $xpNext = "500,001";
-        break;
-                
-        case "12":
+        case "9":
             $xpNext = "600,001";
         break;
-                
-        case "13":
-            $xpNext = "700,001";
-        break;
-                
-        case "14":
-            $xpNext = "800,001";
-        break;
-                
-        case "15":
-            $xpNext = "900,001";
-        break;
-                
-        case "16":
-            $xpNext = "1,000,001";
-        break;
-                
-        case "17":
-            $xpNext = "1,100,001";
-        break;
-                
-        case "18":
-            $xpNext = "1,200,001";
-        break;
-                
-        case "19":
-            $xpNext = "1,300,001";
-        break;
-                
-        case "20":
+
+        case "10":
             $xpNext = "---";
         break;
-
 
         default:
           $xpNext = " =P ";
