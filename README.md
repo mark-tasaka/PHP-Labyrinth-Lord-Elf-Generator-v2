@@ -3,6 +3,19 @@ The Labyrinth Lord Elf Character Generator Version 2 is the second iteration of 
 
 -------------
 
+A live version of the Labyrinth Lord Elf Character Generator Version 2 is available at:
+
+https://www.oldschooladventures.org/ll/classes/elf/
+
+------------
+
+
+Update 1.01: 2022-07-04
+
+Updates elf.php, elf.css, classDetails.php, gear.php, spells.php, weapons.php, and xp.php.  As well, a link to a live version of the Elf Character Generator has been added.
+
+
+
 Initial commit: 2022-07-02
 
 The initial commit for the Labyrinth Lord Elf Character Generator Version 2.
